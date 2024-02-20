@@ -1,4 +1,4 @@
-
+/*
 #include <iostream>
 #include <thread>
 
@@ -10,10 +10,21 @@ int main() {
     std::thread t(hello);
     t.join();
 }
-
-/*
-#include <iostream>
-int main() {
-     std::cout << "Hello World\n";
-}
 */
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
+
+    for (const string& word : msg)
+    {
+        cout << word << " ";
+    }
+    cout << endl;
+}
